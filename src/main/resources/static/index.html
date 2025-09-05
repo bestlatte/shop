@@ -376,12 +376,15 @@
                 // 跳轉到 landing.html
                 window.location.href = "/landing.html";
               } else {
-                alert(data.message || "註冊失敗");
+                console.warn(
+                  "註冊失敗:",
+                  data && data.message ? data.message : "未知錯誤"
+                );
               }
             })
             .catch((error) => {
               console.error("註冊錯誤:", error);
-              alert("註冊失敗，請稍後再試");
+              console.warn("註冊失敗，請稍後再試");
             })
             .finally(() => {
               // 恢復按鈕狀態
