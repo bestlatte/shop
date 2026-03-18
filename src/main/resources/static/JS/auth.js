@@ -7,6 +7,7 @@
       : location.origin);
 
   const TOKEN_KEY = "jwt_token";
+  // 先創一個物件變數Auth
   const Auth = {};
 
   Auth.setToken = (token, remember) => {

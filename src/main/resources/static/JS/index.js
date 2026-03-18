@@ -396,17 +396,15 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             if (data.status === "success") {
-              // 登入成功 - 保存 Token
-              localStorage.setItem("token", data.token);
+              //  改用 Auth 管理 token，順便選擇 remember = true 改用 localStorage
+              Auth.setToken(data.token, true);
 
               // 清空表單
               email.value = "";
               password.value = "";
 
-              // 顯示成功訊息
               showSuccessMessage("登入成功！");
 
-              // 0.5秒後跳轉到 landing.html
               setTimeout(() => {
                 window.location.href = "landing.html";
               }, 500);
