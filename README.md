@@ -5,24 +5,6 @@
 
 ## 主要技術棧
 
-### 後端技術
-- **Spring Boot 3.5.4** (核心框架)
-- **Java 21**
-- **MySQL 8.0.22** (資料庫)
-- **JWT** (身份驗證)
-- **BCrypt** (密碼加密)
-- **Spring Mail** (電子郵件服務)
-- **Spring Validation** (資料驗證)
-- **Spring AOP** (面向切面程式設計)
-- **Spring JDBC** (資料庫連接)
-
-### 前端技術
-- **HTML5/CSS3/JavaScript**
-- **Boxicons** (圖示庫)
-- **響應式設計**
-- **CSS Media Queries**
-- **SVG** (向量圖形)
-
 ## 專案特色
 - **完整的用戶管理系統** - 註冊、登入、密碼重置
 - **安全性設計** - JWT認證、密碼加密、資料驗證
@@ -178,23 +160,6 @@ src/main/resources/static/
 └── test.html             # 測試頁面
 ```
 
-### 配置設定
-
-#### 資料庫配置
-- **資料庫**: MySQL
-- **資料庫名稱**: product_shop
-- **時區**: Asia/Taipei
-- **編碼**: UTF-8
-
-#### 郵件服務配置
-- **SMTP 服務**: Gmail
-- **端口**: 587
-- **加密**: STARTTLS
-
-#### JWT 配置
-- **過期時間**: 24小時 (86400000毫秒)
-- **密鑰**: 自定義密鑰
-
 ### 主要功能模組
 
 #### 1. 用戶註冊系統
@@ -335,10 +300,6 @@ src/main/resources/static/
 - 密碼重置郵件自動發送
 - 支援重新發送功能
 
-#### 6. 開發者友好
-- 清晰的程式碼架構
-- 完整的 API 文檔
-- 易於擴展和維護
 
 ### 開發環境要求
 
@@ -347,13 +308,6 @@ src/main/resources/static/
 - **MySQL**: 8.0 或以上
 - **IDE**: IntelliJ IDEA, Eclipse, VS Code 等
 
-### 部署說明
-
-1. 確保 MySQL 資料庫已啟動並創建 `product_shop` 資料庫
-2. 修改 `application.properties` 中的資料庫連接資訊
-3. 配置 Gmail SMTP 設定
-4. 執行 `mvn spring-boot:run` 啟動應用程式
-5. 訪問 `http://localhost:8080` 查看應用程式
 
 ### 安全性考量
 
@@ -365,7 +319,6 @@ src/main/resources/static/
 
 ### 測試
 
-- 使用 Spring Boot Test 進行單元測試
 - 提供測試頁面進行功能驗證
 - 包含密碼重置測試頁面
 
