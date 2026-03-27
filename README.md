@@ -23,10 +23,9 @@
 - **Dotenv** (環境變數管理)
 
 ### 前端技術
-- **HTML5 / CSS3 / Vanilla JavaScript**
+- **HTML5 / CSS3 / JavaScript**
 - **Fetch API / AJAX** (非同步資料請求)
 - **LocalStorage** (前端資料快取、狀態管理與降級策略)
-- **Boxicons / FontAwesome** (圖示庫)
 - **CSS Media Queries** (響應式設計 RWD)
 
 ---
