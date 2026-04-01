@@ -18,12 +18,6 @@
 - **Spring Scheduling** (背景排程任務)
 - **Spring AOP / Validation** (切面程式設計與資料驗證)
 
-### 後端技術 (Node.js 金流模組)
-- **Node.js (>=18) / Express** (輕量級 Web 框架)
-- **ECPay AIO Node.js SDK** (綠界全方位金流 SDK)
-- **EJS** (模板引擎)
-- **Dotenv** (環境變數管理)
-
 ### 前端技術
 - **HTML5 / CSS3 / JavaScript**
 - **Fetch API / AJAX** (非同步資料請求)
