@@ -12,7 +12,7 @@
 - **Java 21**
 - **MySQL 8.0.22** (關聯式資料庫，支援 Railway 雲端部署)
 - **Spring JDBC** (資料庫操作層，手寫 SQL 提供高靈活度)
-- **JWT ** (無狀態身份驗證)
+- **JWT** (無狀態身份驗證)
 - **BCrypt** (密碼雜湊加密)
 - **Spring Mail** (電子郵件服務，串接 Gmail SMTP)
 - **Spring Scheduling** (背景排程任務)
