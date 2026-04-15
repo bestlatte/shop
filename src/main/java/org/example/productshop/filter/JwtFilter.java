@@ -36,12 +36,9 @@ public class JwtFilter implements Filter {
             "/api/products/markets/sync",
             "/api/pricing",
             "/api/pricing/quote",
-            "/api/pricing/**",
             "/api/products/",
-            "/api/products/*/market-tiers",
             "/api/addresses",
-            "/api/addresses/**",
-            "/api/orders/**",
+            "/api/orders",
 
             // 其他
             "/error"

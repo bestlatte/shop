@@ -4,6 +4,7 @@ import org.example.productshop.api.BCrypt;
 import org.example.productshop.entity.Member;
 import org.example.productshop.service.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
 
@@ -35,10 +36,18 @@ public class RegisterDaoImpel implements RegisterDao {
         map.put("token", token);
         map.put("token_created_at", LocalDateTime.now());
 
-        namedParameterJdbcTemplate.update(sql, map);
+        try {
+            namedParameterJdbcTemplate.update(sql, map);
+        } catch (DuplicateKeyException e) {
+            return "此 Email 已被註冊";
+        }
 
-        // 發送驗證信
-        emailService.sendVerificationEmail(member.getEmail(), token);
+        try {
+            emailService.sendVerificationEmail(member.getEmail(), token);
+        } catch (Exception e) {
+            System.err.println("寄送驗證信失敗: " + e.getMessage());
+            return "註冊成功，但驗證信寄送失敗，請稍後使用重寄驗證信功能";
+        }
 
         return "註冊成功，請至信箱點擊驗證連結完成啟用";
     }

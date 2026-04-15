@@ -146,4 +146,5 @@
 
   // 導出到全域
   window.Auth = Auth;
+  if (!window.API_BASE) window.API_BASE = API_BASE;
 })();
